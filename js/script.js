@@ -81,13 +81,27 @@ const team = [
 
 
 
-// stampo con log tutti i dati in nostro possesso piu stinga foto
+// stampo con log tutti i dati in nostro possesso piu stinga foto con un ciclo for
+
+
+
+for(let i = 0 ; i < team.length ; i++){
+    console.log(team[i]);
+    console.log('nome: ' + team[i].name);
+    console.log('cognome: ' + team[i].surname);
+    console.log('ruolo: ' + team[i].role);
+    console.log('immagine: ' + team[i].image);
+
+    
+}
 
 
 
 
 
-// devo riportare in pagina con innerHTML/Text i dati sooto forma di stringa x ogni chiave (nome, cognome, role, ecc)
+
+
+// devo riportare in pagina con innerHTML/Text i dati sotto forma di stringa x ogni chiave (nome, cognome, role, ecc)
 
 
 
