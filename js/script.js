@@ -26,6 +26,59 @@ Barbara  Ramos	    Graphic Designer	      barbara-ramos-graphic-designer.jpg */
 // creo array di oggetti inserendo i dati fortiti
 
 
+const team = [
+    {
+        name: 'Wayne',
+        surname: 'Barnett',
+        role: 'Founder & CEO',
+        image: './img/wayne-barnett-founder-ceo.jpg'
+    
+    },
+
+    {
+        name: 'Angela',
+        surname: 'Caroll',
+        role: 'Chief Editor',
+        image: './img/angela-caroll-chief-editor.jpg'
+
+    },
+
+    {
+        name: 'Walter',
+        surname: 'Gordon',
+        role:'Office Manager' ,
+        image:'./img/walter-gordon-office-manager.jpg'
+
+    },
+
+    {
+        name:'Angela' ,
+        surname: 'Lopez',
+        role: 'Social Media Manager',
+        image:'./img/angela-lopez-social-media-manager.jpg'
+
+    },
+
+    {
+        name: 'Scott',
+        surname: 'Estrada',
+        role: 'Developer',
+        image:'./img/scott-estrada-developer.jpg'
+
+    },
+
+    {
+        name: 'Barbara',
+        surname: 'Ramos',
+        role: 'Graphic Designer',
+        image: './img/barbara-ramos-graphic-designer.jpg'
+
+    }
+
+
+]
+
+
 
 
 // stampo con log tutti i dati in nostro possesso piu stinga foto
