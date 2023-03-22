@@ -31,7 +31,7 @@ const team = [
         name: 'Wayne',
         surname: 'Barnett',
         role: 'Founder & CEO',
-        image: './img/wayne-barnett-founder-ceo.jpg'
+        image: 'wayne-barnett-founder-ceo.jpg'
     
     },
 
@@ -39,7 +39,7 @@ const team = [
         name: 'Angela',
         surname: 'Caroll',
         role: 'Chief Editor',
-        image: './img/angela-caroll-chief-editor.jpg'
+        image: 'angela-caroll-chief-editor.jpg'
 
     },
 
@@ -47,7 +47,7 @@ const team = [
         name: 'Walter',
         surname: 'Gordon',
         role:'Office Manager' ,
-        image:'./img/walter-gordon-office-manager.jpg'
+        image:'walter-gordon-office-manager.jpg'
 
     },
 
@@ -55,7 +55,7 @@ const team = [
         name:'Angela' ,
         surname: 'Lopez',
         role: 'Social Media Manager',
-        image:'./img/angela-lopez-social-media-manager.jpg'
+        image:'angela-lopez-social-media-manager.jpg'
 
     },
 
@@ -63,7 +63,7 @@ const team = [
         name: 'Scott',
         surname: 'Estrada',
         role: 'Developer',
-        image:'./img/scott-estrada-developer.jpg'
+        image:'scott-estrada-developer.jpg'
 
     },
 
@@ -71,12 +71,12 @@ const team = [
         name: 'Barbara',
         surname: 'Ramos',
         role: 'Graphic Designer',
-        image: './img/barbara-ramos-graphic-designer.jpg'
+        image: 'barbara-ramos-graphic-designer.jpg'
 
     }
 
 
-]
+];
 
 
 
@@ -86,25 +86,14 @@ const team = [
 
 
 for(let i = 0 ; i < team.length ; i++){
+
     console.log(team[i]);
     console.log('nome: ' + team[i].name);
     console.log('cognome: ' + team[i].surname);
     console.log('ruolo: ' + team[i].role);
     console.log('immagine: ' + team[i].image);
-
-    
-}
-
-
-
-
-
-
-
-// devo riportare in pagina con innerHTML/Text i dati sotto forma di stringa x ogni chiave (nome, cognome, role, ecc)
-
-
-
+     
+};
 
 
 
@@ -122,6 +111,33 @@ for(let i = 0 ; i < team.length ; i++){
 
 
 
+const cardBox = document.getElementById('cardbox');
+
+let cardGroup = '';
+
+for(let i = 0 ; i < team.length ; i++){
+
+    const member = team[i];
+    const cardTpl = `
+<div class="col-4">
+    <div class="card mt-2" style="width: 18rem;">
+        <img src="./img/${member.image}" class="card-img-top " alt="...">
+        <div class="card-body card-height">
+            <p class="fw-semibold text-center">${member.name} ${member.surname}</p>
+            <p class="text-center">${member.role}</p>
+        </div>
+    </div>
+</div>
+`;
+    
+    cardGroup += cardTpl;
+
+
+   
+}
+
+cardBox.innerHTML = cardGroup;
+console.log(cardGroup);
 
 
 
